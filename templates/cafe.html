@@ -1,0 +1,98 @@
+{% include "header.html" %}
+<style>
+    body, html {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        position: relative;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .cafe-image {
+        width: 100%;
+        max-height: 35rem;
+    }
+
+    .text-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2rem;
+    }
+    .container h1 {
+        color: white;
+        font-weight: bold;
+    }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 0px;
+        margin-left: -15px;
+    }
+    h2 {
+        text-transform: uppercase;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 2rem;
+    }
+    table {
+        margin: 0 auto;
+        text-align: center;
+    }
+    h3 {
+        margin: 1.5rem;
+    }
+</style>
+<!--<img src="{{ cafe.img_url }}" width="100%" style="max-height: 30rem;">-->
+<!--<h1>{{ cafe.name }}</h1>-->
+<div class="container">
+    <img src="{{ cafe.img_url }}" class="cafe-image">
+    <div class="text-overlay">
+        <h1>{{ cafe.name }}</h1>
+    </div>
+</div>
+
+<h2>Details: </h2>
+<div style="text-align: center;">
+    <table>
+        <tr>
+            <td><h3>🛜Wifi:</h3></td>
+            <td><h3>{% if cafe.has_wifi == 1 %}✅{% else %}❌{% endif %}</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>🔌Sockets:</h3></td>
+            <td><h3>{% if cafe.has_sockets == 1 %}✅{% else %}❌{% endif %}</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>🚽Toilet:</h3></td>
+            <td><h3>{% if cafe.has_toilet == 1 %}✅{% else %}❌{% endif %}</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>📞Calls:</h3></td>
+            <td><h3>{% if cafe.can_take_calls == 1 %}✅{% else %}❌{% endif %}</h3></td>
+        </tr>
+
+        <tr>
+            <td><h3>🪑Seats:</h3></td>
+            <td><h3>{{ cafe.seats }}</h3></td>
+        </tr>
+
+    </table>
+    {% if current_user.is_authenticated %}
+    <a href="{{ url_for('delete_cafe', id=cafe.id) }}">
+        <button type="button" class="btn btn-danger">Delete</button>
+    </a>
+    {% endif %}
+</div>
+
+
+{% include "footer.html" %}

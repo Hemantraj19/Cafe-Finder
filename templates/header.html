@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)file:///C:/Users/Hemant/Desktop/coffee-master/index.html -->
+<html lang="zxx" class="no-js" style="display: block;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="file:///C:/Users/Hemant/Desktop/coffee-master/img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="codepixer">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+
+    <!-- Site Title -->
+    <title>Coffee</title>
+
+    <link href="../static/css/css" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="../static/css/linearicons.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/nice-select.css">
+    <link rel="stylesheet" href="../static/css/animate.min.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" charset="UTF-8" src="../static/js/common.js.download"></script>
+    <script type="text/javascript" charset="UTF-8" src="../static/js/util.js.download"></script>
+</head>
+<body style="display: block;" contenteditable="false" class="">
+<button type="button" id="mobile-nav-toggle"><i class="lnr lnr-menu"></i></button>
+
+<header id="header" class="">
+    <div class="header-top">
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-lg-8 col-sm-4 col-8 header-top-right no-padding">
+                    <div style="text-align: right;"><font color="#ffffff"><br></font></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center justify-content-between d-flex">
+            <div id="logo"><br></div>
+            <nav id="nav-menu-container">
+                <ul class="nav-menu sf-js-enabled sf-arrows" style="touch-action: pan-y;">
+                    <li class=""><a href="file:///C:/Users/Hemant/Desktop/coffee-master/index.html#home">Home</a></li>
+                    <li class=""><a href="file:///C:/Users/Hemant/Desktop/coffee-master/index.html#about">About</a></li>
+                    <li class="menu-active"><a href="file:///C:/Users/Hemant/Desktop/coffee-master/index.html#coffee">List</a>
+                    </li>
+                    <li><a href="file:///C:/Users/Hemant/Desktop/coffee-master/index.html#review">Contact us</a></li>
+                    {% if current_user.is_authenticated %}
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% endif %}
+
+
+                </ul>
+            </nav><!-- #nav-menu-container -->
+        </div>
+    </div>
+</header><!-- #header -->

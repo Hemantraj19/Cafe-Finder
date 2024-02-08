@@ -1,0 +1,81 @@
+{% include "header.html" %}
+<!-- start banner Area -->
+<section class="banner-area" id="home">
+    <div class="container">
+        <div class="row fullscreen d-flex align-items-center justify-content-start" style="height: 585px;">
+            <div class="banner-content col-lg-7">
+
+                <h1><br><br>&ensp;Cafe Finder</h1></div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+
+<!-- Start video-sec Area -->
+<section class="video-sec-area pb-100 pt-40" id="about">
+    <div class="container">
+        <div class="row justify-content-start align-items-center">
+            <div class="col-lg-6 video-right justify-content-center align-items-center d-flex">
+                <div class="overlay overlay-bg"></div>
+                <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid"
+                                                                                            src="./index_files/play-icon.png"
+                                                                                            alt=""></a>
+            </div>
+            <div class="col-lg-6 video-left">
+                <h6>Welcome to our cafe community!</h6>
+                <h1>We Regularly Update The Cafes Rating.<br></h1>
+                <p><span>We are here to help you find cafe you like.&nbsp;</span></p>
+                <p>Explore our diverse selection of cafes, each offering a unique atmosphere and delightful culinary
+                    experiences. Whether you prefer a cozy corner for a quiet read or a vibrant space for socializing,
+                    we have the perfect spot for you.</p></div>
+        </div>
+    </div>
+</section>
+<!-- End video-sec Area -->
+
+<!-- Start menu Area -->
+<section class="menu-area section-gap" id="coffee">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class="menu-content pb-60 col-lg-10">
+                <div class="title text-center">
+                    <h1 class="mb-10">Here Is The List.</h1>
+                    <p>Discover your new favorite cafe with us!</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for cafe in cafes %}
+            <div class="col-lg-4">
+                <a href="{{ url_for('show_cafe', cafe_id=cafe.id) }}">
+                    <div class="single-menu">
+                        <img src="{{ cafe.img_url }}" class="card-img-top rounded"
+                             style="width: 100%; height: 200px; object-fit: cover; margin-bottom: 15px;">
+                        <div class="title-div justify-content-between d-flex">
+                            <h4>{{ cafe.name }}</h4>
+                            <p class="price float-right">
+                                {{ cafe.coffee_price }}
+                            </p>
+                        </div>
+                        <p>Location: <a href="{{cafe.map_url}}">{{cafe.location}}</a></p>
+
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End gallery Area -->
+
+<!-- Start review Area -->
+
+<!-- End review Area -->
+
+<!-- Start blog Area -->
+
+<!-- End blog Area -->
+
+
+<!-- start footer Area -->
+{% include "footer.html" %}
