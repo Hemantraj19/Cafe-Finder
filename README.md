@@ -1,4 +1,4 @@
-# Flask Cafe Management System
+# Cafe Finder Flask
 
 This Flask application serves as a management system for cafes, allowing users to view cafes, add new cafes, and manage cafe information. Below is an overview of the functionality and structure of the application.
 
