@@ -2,6 +2,10 @@
 
 This Flask application serves as a management system for cafes, allowing users to view cafes, add new cafes, and manage cafe information. Below is an overview of the functionality and structure of the application.
 
+![Screen Shot](https://github.com/Hemantraj19/Cafe-Finder/blob/main/img1.png)
+![Screen Shot](https://github.com/Hemantraj19/Cafe-Finder/blob/main/img2.png)
+![Screen Shot](https://github.com/Hemantraj19/Cafe-Finder/blob/main/img3.png)
+
 ## Features
 
 - **User Authentication**: Users can register as administrators and login to access administrative features.
