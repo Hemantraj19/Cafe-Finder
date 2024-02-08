@@ -8,7 +8,7 @@ This Flask application serves as a management system for cafes, allowing users t
 
 ## Features
 
-- **User Authentication**: Users can register as administrators and login to access administrative features.
+- **User Authentication**: Privilege Users can register as administrators and login to access administrative features.
 - **Cafe Management**: Administrators can add new cafes, view existing cafes, and delete cafes.
 - **User Interface**: The application provides a user-friendly interface for users to interact with.
 
